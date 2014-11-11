@@ -62,12 +62,4 @@ abstract class CommonManager implements Manager
     {
         $this->manager->flush();
     }
-
-    /**
-     * @return string
-     */
-    protected function getClass()
-    {
-        return $this->class;
-    }
 }
