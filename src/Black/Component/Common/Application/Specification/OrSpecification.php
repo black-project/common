@@ -37,8 +37,8 @@ class OrSpecification implements Specification
      */
     public function __construct(Specification $spec1, Specification $spec2)
     {
-        $this->s1 = $spec1;
-        $this->s2 = $spec2;
+        $this->spec1 = $spec1;
+        $this->spec2 = $spec2;
     }
 
     /**
@@ -48,7 +48,7 @@ class OrSpecification implements Specification
      */
     public function isSatisfiedBy($subject)
     {
-        return $this->s1->isSatisfiedBy($subject)
-            || $this->s2->isSatisfiedBy($subject);
+        return $this->spec1->isSatisfiedBy($subject)
+            || $this->spec2->isSatisfiedBy($subject);
     }
 }
