@@ -19,8 +19,8 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "black/ddd-php": "~1.0",
-        "black/cqrs-php": "~1.0",
+        "black/ddd-php": "~2.0.0",
+        "black/cqrs-php": "~1.0.0",
         "doctrine/common": "~2.4"
     },
     "require-dev": {
