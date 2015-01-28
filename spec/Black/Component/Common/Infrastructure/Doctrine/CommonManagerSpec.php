@@ -3,7 +3,7 @@
 namespace spec\Black\Component\Common\Infrastructure\Doctrine;
 
 use Black\Component\Common\Infrastructure\Doctrine\CommonManager;
-use Black\DDD\DDDinPHP\Infrastructure\Persistence\Repository;
+use Black\DDD\DDDinPHP\Domain\Model\Repository;
 use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Doctrine\Common\Persistence\ObjectManager;
 use PhpSpec\ObjectBehavior;
@@ -14,6 +14,7 @@ class CommonManagerSpec extends ObjectBehavior
     function let(ObjectManager $manager, ClassMetadata $metadata)
     {
         $class = 'spec\Black\Component\Common\Infrastructure\Doctrine\Test';
+
         $manager->getClassMetadata($class)->willReturn($metadata);
         $manager->getRepository($class)->willReturn('spec\Black\Component\Common\Infrastructure\Doctrine\TestRepository');
         $manager->flush()->willReturn(null);
