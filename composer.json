@@ -19,13 +19,10 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "black/ddd-php": "~2.0.0",
-        "black/cqrs-php": "~1.0.0",
         "doctrine/common": "~2.4"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2.0",
-        "henrikbjorn/phpspec-code-coverage": "~1.0.0"
+        "phpspec/phpspec": "~2.0"
     },
     "config": {
         "bin-dir": "bin"
