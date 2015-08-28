@@ -13,12 +13,12 @@ namespace Black\Component\Common\Infrastructure\Doctrine;
 use Doctrine\Common\Persistence\ObjectManager;
 
 /**
- * Class CommonManager
+ * Class EntityManager
  *
  * @author  Alexandre 'pocky' Balmes <alexandre@lablackroom.com>
  * @license http://opensource.org/licenses/mit-license.php MIT
  */
-abstract class CommonManager implements Manager
+abstract class EntityManager implements Manager
 {
     /**
      * @var ObjectManager
