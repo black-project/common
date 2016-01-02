@@ -3,7 +3,7 @@
 namespace Black\Component\Common\Application\Form\Transformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
-use Symfony\Component\Form\Extension\Core\ChoiceList\ChoiceListInterface;
+use Symfony\Component\Form\ChoiceList\ChoiceListInterface;
 
 /**
  * Class ValuetoChoiceOrTextTransformer

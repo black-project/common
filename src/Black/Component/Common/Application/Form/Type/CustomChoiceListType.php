@@ -3,6 +3,7 @@
 namespace Black\Component\Common\Application\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\FormBuilderInterface;
 use Black\Component\Common\Application\Form\Transformer\ValuetoModelsOrNullTransformer;
@@ -37,7 +38,7 @@ class CustomChoiceListType extends AbstractType
      */
     public function __construct($choiceList, $choiceListName)
     {
-        $this->choiceList     = $choiceList;
+        $this->choiceList = $choiceList;
         $this->choiceListName = $choiceListName;
     }
 
@@ -56,17 +57,9 @@ class CustomChoiceListType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getName()
-    {
-        return $this->choiceListName;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getParent()
     {
-        return 'choice';
+        return ChoiceType::class;
     }
 
     /**

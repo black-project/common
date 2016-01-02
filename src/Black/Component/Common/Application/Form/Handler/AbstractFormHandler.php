@@ -25,7 +25,7 @@ abstract class AbstractFormHandler implements HandlerInterface
         FormInterface $form,
         RequestStack $requestStack
     ) {
-        $this->form    = $form;
+        $this->form = $form;
         $this->request = $requestStack->getCurrentRequest();
     }
 

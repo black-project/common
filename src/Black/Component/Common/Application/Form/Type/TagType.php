@@ -11,6 +11,7 @@
 
 namespace Black\Component\Common\Application\Form\Type;
 
+use Doctrine\DBAL\Types\TextType;
 use DTL\Symfony\Form\DataTransformer\ArrayToDelimitedStringTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -28,15 +29,6 @@ class TagType extends AbstractType
     protected $name;
 
     /**
-     * Construct the type with his name
-     *
-     * @param string $name
-     */
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
-    /**
      * {@inheritDoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -48,16 +40,8 @@ class TagType extends AbstractType
     /**
      * {@inheritDoc}
      */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getParent()
     {
-        return 'text';
+        return TextType::class;
     }
 }
