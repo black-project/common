@@ -32,7 +32,7 @@ class ORMRepository
      /**
      * @return mixed
      */
-    public function getClassName()
+    public function getClassName() : string
     {
         return $this->class;
     }
