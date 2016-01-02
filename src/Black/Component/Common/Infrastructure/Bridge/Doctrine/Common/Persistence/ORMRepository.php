@@ -1,13 +1,13 @@
 <?php
 
-namespace Black\Component\Common\Infrastructure\Persistence\MongoDB;
+namespace Black\Bridge\Doctrine\Common\Persistence;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
 /**
- * Class DocumentRepository
+ * Class ORMRepository
  */
-class DocumentRepository
+class ORMRepository
 {
     /**
      * @var
@@ -46,10 +46,15 @@ class DocumentRepository
     }
 
     /**
-     * @return mixed
+     * @param string $alias
+     * @param null $indexBy
+     * @return \Doctrine\ORM\QueryBuilder
      */
-     public function createQueryBuilder()
-     {
-         return $this->manager->createQueryBuilder($this->class);
-     }
+    protected function getQueryBuilder($alias = 'p', $indexBy = null)
+    {
+        return $this->manager
+            ->createQueryBuilder()
+            ->select($alias)
+            ->from($this->class, $alias, $indexBy);
+    }
 }

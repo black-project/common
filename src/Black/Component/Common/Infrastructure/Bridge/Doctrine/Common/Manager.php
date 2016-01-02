@@ -1,24 +1,13 @@
 <?php
-/*
- * This file is part of the Black package.
- *
- * (c) Alexandre Balmes <alexandre@lablackroom.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
-namespace Black\Component\Common\Infrastructure\Doctrine;
+namespace Black\Bridge\Doctrine\Common;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
 /**
- * Class EntityManager
- *
- * @author  Alexandre 'pocky' Balmes <alexandre@lablackroom.com>
- * @license http://opensource.org/licenses/mit-license.php MIT
+ * Class Manager
  */
-abstract class EntityManager implements Manager
+abstract class Manager
 {
     /**
      * @var ObjectManager
@@ -41,10 +30,10 @@ abstract class EntityManager implements Manager
      */
     public function __construct(ObjectManager $manager, $class)
     {
-        $this->manager    = $manager;
+        $this->manager = $manager;
         $this->repository = $manager->getRepository($class);
-        $metadata         = $manager->getClassMetadata($class);
-        $this->class      = $metadata->getName();
+        $metadata = $manager->getClassMetadata($class);
+        $this->class = $metadata->getName();
     }
 
     /**

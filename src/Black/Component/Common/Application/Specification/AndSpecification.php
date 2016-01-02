@@ -2,15 +2,10 @@
 
 namespace Black\Component\Common\Application\Specification;
 
-use Black\DDD\DDDinPHP\Application\Specification\Specification;
-
 /**
  * Class AndSpecification
- *
- * @author  Alexandre 'pocky' Balmes <alexandre@lablackroom.com>
- * @license http://opensource.org/licenses/mit-license.php MIT
  */
-class AndSpecification implements Specification
+class AndSpecification
 {
     /**
      * @var Specification

@@ -1,0 +1,14 @@
+black:
+    bundle:
+        common:
+            eventListener:
+                setButtonsSubscriber:
+                    button:
+                        save:
+                            label: Enregistrer
+                        saveAndAdd:
+                            label: Enregistrer et créer
+                        reset:
+                            label: Annuler les modifications
+                        delete:
+                            label: Supprimer

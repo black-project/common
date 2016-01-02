@@ -14,15 +14,26 @@
     ],
     "autoload": {
         "psr-4": {
-            "Black\\Component\\Common\\": "src/Black/Component/Common/"
+            "Black\\Component\\Common\\": "src/Black/Component/Common/",
+            "Black\\Bundle\\CommonBundle\\": "src/Black/Component/Common/Infrastructure/Bridge/Symfony/CommonBundle",
+            "Black\\Bridge\\Doctrine\\Common\\": "src/Black/Component/Common/Infrastructure/Bridge/Doctrine/Common"
         }
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\Black\\Component\\Common\\": "tests/" }
     },
     "require": {
         "php": ">=5.4.0",
-        "doctrine/common": "~2.4"
+        "symfony/form": "~2.8",
+        "dantleech/symfony-form-array-to-delimited-string-transformer": "~0.1",
+        "ramsey/uuid": "~2.8.1"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0"
+    },
+    "suggest": {
+        "symfony/framework-bundle": "If you want to use the BlackCommonBundle",
+        "doctrine/common": "If you want to persist in Doctrine"
     },
     "config": {
         "bin-dir": "bin"
