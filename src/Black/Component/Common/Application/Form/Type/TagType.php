@@ -12,7 +12,7 @@
 namespace Black\Component\Common\Application\Form\Type;
 
 use Doctrine\DBAL\Types\TextType;
-use DTL\Symfony\Form\DataTransformer\ArrayToDelimitedStringTransformer;
+use Black\Component\Common\Application\Form\Transformer\ArrayToDelimitedStringTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 

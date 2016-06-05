@@ -25,7 +25,6 @@
     "require": {
         "php": ">=7.0",
         "symfony/form": "~2.8|~3.0",
-        "dantleech/symfony-form-array-to-delimited-string-transformer": "~0.1",
         "ramsey/uuid": "~2.8.1"
     },
     "require-dev": {
