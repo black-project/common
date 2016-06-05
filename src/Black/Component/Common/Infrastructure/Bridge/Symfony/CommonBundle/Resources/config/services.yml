@@ -16,7 +16,7 @@ services:
     black_common.image_type_extension:
         class: "%black_common.type.class.image%"
         tags:
-            - { name: form.type_extension }
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FileType }
 
     black_common.form.event.button.save:
         class: "%black_common.form.event.button.save.class%"
