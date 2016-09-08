@@ -1,0 +1,29 @@
+parameters:
+    "black_common.form.type.tag.class": Black\Common\Application\Form\Type\TagType
+
+    "black_common.type.class.image": Black\Common\Application\Form\Extension\ImageTypeExtension
+
+    "black_common.form.event.button.save.class": Black\Common\Application\Form\EventListener\SetSaveButtonSubscriber
+    "black_common.form.event.button.save_and_add.class": Black\Common\Application\Form\EventListener\SetSaveAndAddButtonSubscriber
+    "black_common.form.event.button.reset.class": Black\Common\Application\Form\EventListener\SetResetButtonSubscriber
+
+services:
+    black_common.form.type.tag:
+        class: "%black_common.form.type.tag.class%"
+        tags:
+            - { name: form.type }
+
+    black_common.image_type_extension:
+        class: "%black_common.type.class.image%"
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FileType }
+
+    black_common.form.event.button.save:
+        class: "%black_common.form.event.button.save.class%"
+
+    black_common.form.event.button.save_and_add:
+        class: "%black_common.form.event.button.save_and_add.class%"
+
+    black_common.form.event.button.reset:
+        class: "%black_common.form.event.button.reset.class%"
+

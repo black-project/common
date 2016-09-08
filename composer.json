@@ -14,18 +14,18 @@
     ],
     "autoload": {
         "psr-4": {
-            "Black\\Component\\Common\\": "src/Black/Component/Common/",
-            "Black\\Bundle\\CommonBundle\\": "src/Black/Component/Common/Infrastructure/Bridge/Symfony/CommonBundle",
-            "Black\\Bridge\\Doctrine\\Common\\": "src/Black/Component/Common/Infrastructure/Bridge/Doctrine/Common"
+            "Black\\Component\\Common\\": "src/Common/",
+            "Black\\Bundle\\CommonBundle\\": "src/Common/Infrastructure/Symfony/CommonBundle",
+            "Black\\Bridge\\Doctrine\\Common\\": "src/Common/Infrastructure/Bridge/Doctrine/Common"
         }
     },
     "autoload-dev": {
-        "psr-4": { "Tests\\Black\\Component\\Common\\": "tests/" }
+        "psr-4": { "Tests\\Common\\": "tests/" }
     },
     "require": {
         "php": ">=7.0",
         "symfony/form": "~2.8|~3.0",
-        "ramsey/uuid": "~2.8.1"
+        "ramsey/uuid": "^3.5"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0"

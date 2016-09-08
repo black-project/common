@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Black\Component\Common\Application\Specification;
+namespace spec\Black\Common\Application\Specification;
 
 use PhpSpec\ObjectBehavior;
 use Black\DDD\DDDinPHP\Application\Specification\Specification;
@@ -9,7 +9,7 @@ class OrSpecificationSpec extends ObjectBehavior
 {
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Black\Component\Common\Application\Specification\OrSpecification');
+        $this->shouldHaveType('Black\Common\Application\Specification\OrSpecification');
         $this->shouldImplement('Black\DDD\DDDinPHP\Application\Specification\Specification');
     }
 
