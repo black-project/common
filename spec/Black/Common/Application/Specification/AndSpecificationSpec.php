@@ -3,14 +3,14 @@
 namespace spec\Black\Common\Application\Specification;
 
 use PhpSpec\ObjectBehavior;
-use Black\DDD\DDDinPHP\Application\Specification\Specification;
+use Black\Common\Application\Specification\Specification;
 
 class AndSpecificationSpec extends ObjectBehavior
 {
     public function it_is_initializable()
     {
         $this->shouldHaveType('Black\Common\Application\Specification\AndSpecification');
-        $this->shouldImplement('Black\DDD\DDDinPHP\Application\Specification\Specification');
+        $this->shouldImplement('Black\Common\Application\Specification\Specification');
     }
 
     public function let()
